@@ -50,7 +50,8 @@ class DeVariantSubjectDetailCoreDb implements Serializable {
         table     schema:  'deapp', name: 'de_variant_subject_detail'
         version   false
 
-        id composite: ['chr', 'pos']
+        //id composite: ['chr', 'pos']
+	id composite: ['dataset', 'rsId', 'chr', 'pos']
 
         dataset column: 'dataset_id'
         rsId    column: 'rs_id'
